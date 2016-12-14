@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Damaged RR</title>
+		<style type="text/css">
+		
+		li { display:inline; padding:10px}
+		</style>
+	</head>
+	<body>
+		<div id='header'>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="GoodTransmission.html">GOOD TRANSMISSION</a></li>
+				<li><a href="DamagedTransmission.html">DAMAGED FRAME</a></li>
+				<li><a href="DamagedRR.html">DAMAGED RR</a></li>
+				<li><a href="DamagedRej.html">DAMAGED REJ</a></li>
+			</ul>
+		</div>
+		<div>
+			<h3> Damaged RR </h3>
+			<p> 
+				If the received frame is invalid (i.e., B detects an error, or the
+				frame is so damaged that B does not even perceive that it has received a
+				frame), B discards the frame and takes no further action as the result of that
+				frame. There are two subcases:
+			</p>
+			<h2> TYPE A: </h2>
+			<p> Within a reasonable period of time,A subsequently sends frame B
+				receives frame out of order and sends a REJ i. A must retransmit
+				frame i and all subsequent frames. </p>
+			<div id="flashContent">
+				<object type="application/x-shockwave-flash" data="DamagedRRTypeA.swf" width="550" height="400" id="DamagedRRTypeA" style="float: none; vertical-align:middle">
+					<param name="movie" value="DamagedRRTypeA.swf" />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#ffffff" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="window" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				</object>
+			</div>
+			
+			<h2> TYPE B:</h2>
+			<p>A does not soon send additional frames. B receives nothing and returns
+			   neither an RR nor a REJ. When A’s timer expires, it transmits an RR
+			   frame that includes a bit known as the P bit, which is set to 1. B interprets
+			   the RR frame with a P bit of 1 as a command that must be acknowledged
+			   by sending an RR indicating the next frame that it expects, which is frame
+			   i. When A receives the RR, it retransmits frame i. Alternatively, A could
+			   just retransmit frame i when its timer expires.
+			</p>
+			<div id="flashContent">
+				<object type="application/x-shockwave-flash" data="DamagedRRTypeB.swf" width="550" height="400" id="DamagedRRTypeB" style="float: none; vertical-align:middle">
+					<param name="movie" value="DamagedRRTypeB.swf" />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#ffffff" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="window" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				</object>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
